@@ -6,14 +6,11 @@
 &nbsp;
 <a href="https://www.instagram.com/aswin_barath_/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="aswin_barath_" height="30" width="40" /></a>
 &nbsp;
-<a href="https://www.facebook.com/profile.php?id=100011683902531" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="100011683902531e" height="30" width="40" /></a>
-&nbsp;
-
 
 
 ## Glad to see you here! &nbsp; ![visitors](https://visitor-badge.glitch.me/badge?page_id=AswinBarath.AswinBarath)
 
-I am a full-stack web developer and writer. I love programming, reading, writing and gaming.
+I am a Software Engineer and Cyber Security consultant and writer. I love programming, reading, writing and gaming.
 
 As a Web developer, I enjoy using my obsessive attention to detail, and my unequivocal love for making things that change the world.
 
@@ -24,16 +21,13 @@ That's why I like to make things that make a difference.
 
 ### Talking about Personal Stuff:
 
-- 👨‍🎓 I'm a **Senior Software Engineering Student**
-- 🔭 I’m currently working on [JU Query](https://github.com/AswinBarath/ju-query) platform
+- 👨‍🎓 I'm a **Software Engineering Student**
+-  **currently Building WebifyGlobals**
 - 👨‍🏫 I'm the **Community Leader** at [Codecademy JU](https://community.codecademy.com/jain-university-ju/)
 - 💬 Ask me about anything, I am happy to help
-- ✍ I'm a **Technical blogger** with 10,000+ user reads
-- 🌱 I'm currently learning:
-  - Data Structures and Algorithms on [LeetCode](https://leetcode.com/aswin26barath/)
-  - Tools and technologies from <a href="#"><img alt="React" src="https://img.shields.io/badge/React-20232a.svg?logo=react&logoColor=%2361DAFB"></a> ecosystem
-- 👯 Join my [community](https://community.codecademy.com/jain-university-ju/) if you're a tech enthusiast
-- 📬 How to reach me: [aswin2001barath@gmail.com](mailto:aswin2001barath@gmail.com)
+- ✍ I'm a **Technical Writer** at Medium with 1000+ reads
+- 👯 Join my [community](http://medium.com/@rahuloraj) if you're a tech enthusiast
+- 📬 How to reach me: [rahulraj13051@gmail.com ](mailto:rahulraj13051@gmail.com )
 - 📝 [Resume](https://drive.google.com/file/d/1VsShEZAzpmwZUsfn2G5XgENlrUkv7BJ_/view?usp=sharing).
 - 💪 This is where I write, code and solve problems:
 
