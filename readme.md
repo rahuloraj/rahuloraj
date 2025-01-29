@@ -10,7 +10,7 @@
 
 ## Glad to see you here! &nbsp; ![visitors](https://visitor-badge.glitch.me/badge?page_id=AswinBarath.AswinBarath)
 
-I am a Software Engineer and Cyber Security consultant and writer. I love programming, reading, writing and gaming.
+I am a Software Engineer and Cyber Security Specialist. I love programming, reading, writing and gaming.
 
 As a Web developer, I enjoy using my obsessive attention to detail, and my unequivocal love for making things that change the world.
 
@@ -21,7 +21,7 @@ That's why I like to make things that make a difference.
 
 ### Talking about Personal Stuff:
 
-- 👨‍🎓 I'm a **Software Engineering Student**
+- 👨‍🎓 I'm a **Software Development Engineeri**
 -  **currently Building WebifyGlobals**
 - 👨‍🏫 I'm the **Community Leader** at [Codecademy JU](https://community.codecademy.com/jain-university-ju/)
 - 💬 Ask me about anything, I am happy to help
@@ -157,17 +157,13 @@ XML          2 mins          ░░░░░░░░░░░░░░░░░
 
 ## 📕Latest Blog Posts
 
-- [Technology Keeps Changing with Noonies Nominee Aswin Barath](https://hackernoon.com/the-good-thing-and-the-bad-thing-about-technology-with-noonies-nominee-aswin-barath)
-- [Coding 101: Programming Language Building Blocks](https://hackernoon.com/coding-101-programming-language-building-blocks-1w513uwe)
-- [Python Programming: A Beginner’s Guide](https://dev.to/aswinbarath/python-programming-a-beginner-s-guide-k8n)
-- [Become a Job Ready Programmer](https://medium.com/techsoftware/become-a-job-ready-programmer-1e5a8cdd1351)
+- [Shodan: The Most Powerful and Alarming Search Engine](https://rahuloraj.medium.com/shodan-the-most-powerful-and-alarming-search-engine-a0a43f43df4f)
+- [Hacking LLMs 101 : ATTACKS ON LLMS](https://blog.gopenai.com/hacking-llms-101-attacks-on-llms-186e3ebff0cb)
+- [SEXi Cyber Ransom : $140 Million Demand Sparks Cybersecurity Frenzy and Trojan Hunt](https://rahuloraj.medium.com/sexi-cyber-ransom-shakes-industry-140-million-demand-sparks-cybersecurity-frenzy-and-trojan-hunt-925176940a58)
+- [Meta Llama 3: The Future of Open Source LLM](https://rahuloraj.medium.com/meta-llama-3-the-future-of-open-source-llm-87d7fec6c9c8)
 
 
 <!-- BLOG-POST-LIST:START -->
-- [Learning in Public and Getting Opportunities](https://dev.to/aswinbarath/learning-in-public-and-getting-opportunities-4i92)
-- [Introduction to programming](https://dev.to/aswinbarath/introduction-to-programming-31od)
-- [Accessing Firebase services](https://dev.to/aswinbarath/accessing-firebase-services-4mn9)
-- [Firebase core services](https://dev.to/aswinbarath/firebase-core-services-4hkl)
-- [What is Firebase?](https://dev.to/aswinbarath/what-is-firebase-3f35)
+- [ERC-4337 & Web3 Messaging](https://rahuloraj.medium.com/erc-4337-web3-messaging-a552fa9dc866)
 <!-- BLOG-POST-LIST:END -->
 
