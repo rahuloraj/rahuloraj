@@ -21,7 +21,7 @@ That's why I like to make things that make a difference.
 
 ### Talking about Personal Stuff:
 
-- 👨‍🎓 I'm a **Software Development Engineeri**
+- 👨‍🎓 I'm a **Software Development Engineer**
 -  **currently Building WebifyGlobals**
 - 👨‍🏫 I'm the **Community Leader** at [Codecademy JU](https://community.codecademy.com/jain-university-ju/)
 - 💬 Ask me about anything, I am happy to help
