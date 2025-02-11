@@ -22,13 +22,12 @@ That's why I like to make things that make a difference.
 ### Talking about Personal Stuff:
 
 - 👨‍🎓 I'm a **Software Development Engineer**
--  **currently Building WebifyGlobals**
+-  **Currently Building WebifyGlobals**
 - 👨‍🏫 I'm the **Community Leader** at [Codecademy JU](https://community.codecademy.com/jain-university-ju/)
 - 💬 Ask me about anything, I am happy to help
 - ✍ I'm a **Technical Writer** at Medium with 1000+ reads
 - 👯 Join my [community](http://medium.com/@rahuloraj) if you're a tech enthusiast
 - 📬 How to reach me: [rahulraj13051@gmail.com ](mailto:rahulraj13051@gmail.com )
-- 📝 [Resume](https://drive.google.com/file/d/1VsShEZAzpmwZUsfn2G5XgENlrUkv7BJ_/view?usp=sharing).
 - 💪 This is where I write, code and solve problems:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
