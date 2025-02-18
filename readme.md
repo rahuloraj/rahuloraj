@@ -30,19 +30,7 @@ That's why I like to make things that make a difference.
 - 📬 How to reach me: [rahulraj13051@gmail.com ](mailto:rahulraj13051@gmail.com )
 - 💪 This is where I write, code and solve problems:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://github.com/AswinBarath" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="AswinBarath" height="30" width="40" /></a>
-&nbsp;
-<a href="https://leetcode.com/aswinb/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="aswin26barath" height="30" width="40" /></a>
-&nbsp;
-<a href="https://stackoverflow.com/users/13064312/aswin-barath?tab=profile" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="13064312" height="30" width="40" /></a>
-&nbsp;
-<a href="https://www.hackerrank.com/AswinBarath2" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="AswinBarath2" height="30" width="40" /></a>
-&nbsp;
-<a href="https://medium.com/@aswinbarath" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@aswin2001barath" height="30" width="40" /></a>
-&nbsp;
-<a href="https://dev.to/aswinbarath" target="_blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/dev-dot-to.svg" alt="aswin2001barath" height="30" width="40" /></a>
-&nbsp;
+
 
 ---
 
@@ -110,16 +98,6 @@ That's why I like to make things that make a difference.
 [![wakatime](https://wakatime.com/badge/user/0f3d8544-3446-40bb-987d-b1a8ed7d2cff.svg)](https://wakatime.com/@0f3d8544-3446-40bb-987d-b1a8ed7d2cff) <b>&nbsp; coded, since JAN 22 2021</b>
 
 📊 <b>This Week I Spent My Time On</b>
-
-<!--START_SECTION:waka-->
-```text
-Markdown     5 hrs 3 mins    ███████████▒░░░░░░░░░░░░░   44.70 % 
-Java         4 hrs 35 mins   ██████████░░░░░░░░░░░░░░░   40.59 % 
-JavaScript   1 hr 34 mins    ███▒░░░░░░░░░░░░░░░░░░░░░   13.85 % 
-CSS          3 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.55 % 
-XML          2 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.31 % 
-```
-<!--END_SECTION:waka-->
 
 
 <details>
