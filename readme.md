@@ -23,7 +23,6 @@ That's why I like to make things that make a difference.
 
 - 👨‍🎓 I'm a **Software Development Engineer**
 -  **Currently Building WebifyGlobals**
-- 👨‍🏫 I'm the **Community Leader** at [Codecademy JU](https://community.codecademy.com/jain-university-ju/)
 - 💬 Ask me about anything, I am happy to help
 - ✍ I'm a **Technical Writer** at Medium with 1000+ reads
 - 👯 Join my [community](http://medium.com/@rahuloraj) if you're a tech enthusiast
@@ -95,7 +94,7 @@ That's why I like to make things that make a difference.
 
 
 <details>
-  <summary>&nbsp;&nbsp;<b>😺 My Github stats, 😻 Current Streak and 😸 Most Used Languages</summary>
+
   <br/>
 	<a href="https://github.com/anuraghazra/github-readme-stats" title="Go to Source"><img alt="AswinBarath's Github Stats" src="https://denvercoder1-github-readme-stats.vercel.app/api?username=AswinBarath&show_icons=true&count_private=true&theme=react&border=61dafb&hide_border=true" height="172px"/></a>
 	<a href="https://github.com/anuraghazra/github-readme-stats" title="Go to Source"><img alt="AswinBarath's Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=AswinBarath&langs_count=6&layout=compact&theme=react&hide_border=true&border_color=61dafb&hide=Jupyter%20Notebook,html,css,scss,pug,ruby,php,shell" height="172px"/></a>
