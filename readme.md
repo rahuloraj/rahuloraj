@@ -102,10 +102,10 @@ That's why I like to make things that make a difference.
 - [Shodan: The Most Powerful and Alarming Search Engine](https://rahuloraj.medium.com/shodan-the-most-powerful-and-alarming-search-engine-a0a43f43df4f)
 - [Hacking LLMs 101 : ATTACKS ON LLMS](https://blog.gopenai.com/hacking-llms-101-attacks-on-llms-186e3ebff0cb)
 - [SEXi Cyber Ransom : $140 Million Demand Sparks Cybersecurity Frenzy and Trojan Hunt](https://rahuloraj.medium.com/sexi-cyber-ransom-shakes-industry-140-million-demand-sparks-cybersecurity-frenzy-and-trojan-hunt-925176940a58)
-- [Meta Llama 3: The Future of Open Source LLM](https://rahuloraj.medium.com/meta-llama-3-the-future-of-open-source-llm-87d7fec6c9c8)
-
-
-<!-- BLOG-POST-LIST:START -->
+- [Retrieval-Augmented Generation is Rewriting AI](https://medium.com/@rahuloraj/retrieval-augmented-generation-is-rewriting-ai-5abde6eba5ef)
+- [CYBER: A Unified Operating System for Autonomous Robotic Intelligence](https://medium.com/@rahuloraj/cyber-a-unified-operating-system-for-autonomous-robotic-intelligence-89182aa7e2d7)
+- [AI-Driven Drones: The Next Evolution of Autonomous Aerial Systems](https://medium.com/@rahuloraj/ai-driven-drones-the-next-evolution-of-autonomous-aerial-systems-5c7983e72907)
+- [Meta Llama 3: The Future of Open Source LLM](https://rahuloraj.medium.com/meta-llama-3-the-future-of-open-source-llm-87d7fec6c9c8)<!-- BLOG-POST-LIST:START -->
 - [ERC-4337 & Web3 Messaging](https://rahuloraj.medium.com/erc-4337-web3-messaging-a552fa9dc866)
 <!-- BLOG-POST-LIST:END -->
 
