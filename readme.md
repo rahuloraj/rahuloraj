@@ -1,16 +1,16 @@
 # Welcome to [Rahul Raj's](https://aswinbarath.me/) profile! <a href="https://www.aswinbarath.me/"><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"></a>
 
-<a href="https://www.linkedin.com/in/rahuloraj/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="aswin-barath" height="30" width="40" /></a>
-&nbsp;
-<a href="https://twitter.com/rahuloraj" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="AswinBarath2" height="30" width="40" /></a>
-&nbsp;
-<a href="https://www.instagram.com/rahuloraj/" target="_blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="aswin_barath_" height="30" width="40" /></a>
-&nbsp;
+<p>
+  <a href="https://www.linkedin.com/in/rahuloraj/"><img src="https://skillicons.dev/icons?i=linkedin" height="32"/></a>
+  <a href="https://x.com/rahuloraj"><img src="https://skillicons.dev/icons?i=twitter" height="32"/></a>
+  <a href="https://www.instagram.com/rahuloraj/"><img src="https://skillicons.dev/icons?i=instagram" height="32"/></a>
+</p>
+  
+ 
 
 
-## Glad to see you here! &nbsp; ![visitors](https://visitor-badge.glitch.me/badge?page_id=AswinBarath.AswinBarath)
-
-I am a Software Engineer and Cyber Security Specialist. I love programming, reading, writing and gaming.
+I am a Software Engineer, founder of WebifyGlobals — a SaaS company focused on delivering modern web solutions to businesses. I handle everything from product strategy to engineering and security
+ and Cyber Security Specialist. 
 
 As a Web developer, I enjoy using my obsessive attention to detail, and my unequivocal love for making things that change the world.
 
@@ -91,6 +91,22 @@ That's why I like to make things that make a difference.
 </p>
 
 ---
+<h2 align="center"> DevOps Stats Matrix</h2>
+<h2 align="center">⚡ DevOps Stats Matrix</h2>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=rahuloraj&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=ff2e63&icon_color=08f7fe&text_color=ffffff" height="170"/>
+  
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=rahuloraj&theme=radical&hide_border=true&background=0d1117&ring=ff2e63&fire=ff2e63&currStreakLabel=08f7fe" height="170"/>
+</p>
+
+<p align="center">
+  <img src="https://leetcard.jacoblin.cool/rahuloraj?theme=dark&border=0&radius=12&font=Karma" height="170"/>
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=rahuloraj&theme=react-dark&bg_color=0d1117&color=08f7fe&line=ff2e63&point=ffffff&area=true&hide_border=true"/>
+</p>
 ![snake gif](https://github.com/rahuloraj/rahuloraj/blob/output/github-contribution-grid-snake-dark.svg)
 
 
