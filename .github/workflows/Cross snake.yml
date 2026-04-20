@@ -2,8 +2,11 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # runs daily
+    - cron: "0 0 * * *"
   workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # ✅ FIX ADDED
 
 jobs:
   build:
@@ -18,7 +21,7 @@ jobs:
           github_user_name: rahuloraj
           outputs: |
             dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=ff2e63
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
