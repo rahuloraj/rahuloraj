@@ -22,8 +22,8 @@ That's why I like to make things that make a difference.
 ### Talking about Personal Stuff:
 
 - 👨‍🎓 I'm a **Software Development Engineer**
--  **Currently Building WebifyGlobals**
-- 💬 Ask me about anything, I am happy to help
+-  **Founder of WebifyGlobals**
+- 💬  MERN · Angular · Web Security . Agentic AI . RAG . NLP . Generative AI 
 - ✍ I'm a **Technical Writer** at Medium with 1000+ reads
 - 👯 Join my [community](http://medium.com/@rahuloraj) if you're a tech enthusiast
 - 📬 How to reach me: [rahulraj13051@gmail.com ](mailto:rahulraj13051@gmail.com )
@@ -92,16 +92,14 @@ That's why I like to make things that make a difference.
 
 ---
 <h2 align="center"> DevOps Stats Matrix</h2>
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=rahuloraj&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=ff2e63&icon_color=08f7fe&text_color=ffffff" height="170"/>
-  
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=rahuloraj&theme=radical&hide_border=true&background=0d1117&ring=ff2e63&fire=ff2e63&currStreakLabel=08f7fe" height="170"/>
-</p>
+<div align="center">
 
-<p align="center">
-  <img src="https://leetcard.jacoblin.cool/rahuloraj?theme=dark&border=0&radius=12&font=Karma" height="170"/>
-</p>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:7F77DD,100:1D9E75&height=100&section=header&text=RAHULORAJ&fontSize=45&fontColor=ffffff&animation=fadeIn&fontAlignY=55&fontAlign=50"/>
 
+<img width="49%" src="https://github-readme-stats.vercel.app/api?username=rahuloraj&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github&include_all_commits=true&count_private=true"/>
+<img width="49%" src="https://leetcard.jacoblin.cool/rahuloraj?theme=dark&font=Nunito&hide_border=true"/>
+
+</div>
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=rahuloraj&theme=react-dark&bg_color=0d1117&color=08f7fe&line=ff2e63&point=ffffff&area=true&hide_border=true"/>
 </p>
