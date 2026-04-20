@@ -1,4 +1,6 @@
-name: Generate Pacman Animation
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  name: Generate Pacman Animation
 
 on:
   schedule:
