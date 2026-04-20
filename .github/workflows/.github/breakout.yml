@@ -1,0 +1,42 @@
+name: Generate Breakout Game
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate Breakout Game
+        uses: lowlighter/metrics@latest
+        with:
+          filename: breakout.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+          base: ""
+          plugin_isocalendar: no
+
+          # 🎮 BREAKOUT GAME
+          plugin_achievements: yes
+          plugin_achievements_threshold: C
+          plugin_achievements_display: detailed
+
+          # 👇 THIS ENABLES GAME STYLE GRID
+          plugin_contributions: yes
+          plugin_contributions_sections: yes
+          plugin_contributions_days: 365
+          plugin_contributions_blocks: yes
+
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: .
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
