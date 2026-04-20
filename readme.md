@@ -1,5 +1,9 @@
 # Welcome to [Rahul Raj's](https://aswinbarath.me/) profile! <a href="https://www.aswinbarath.me/"><img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="25px"></a>
+<div align="center">
 
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:7928ca,25:ff0080,50:4776e6,75:1D9E75,100:0f7c6e&height=160&section=header&text=Rahul%20Raj&fontSize=55&fontColor=ffffff&animation=twinkling&fontAlignY=45&fontAlign=50&desc=Founder%20of%20WebifyGlobals%20%7C%20Drone%20Building%20%7C%20AI%20Automations%20%7C%20Problem%20Solver&descSize=15&descAlignY=68&descColor=ffffff&descAnimation=twinkling"/>
+
+</div>
 <p>
   <a href="https://www.linkedin.com/in/rahuloraj/"><img src="https://skillicons.dev/icons?i=linkedin" height="32"/></a>
   <a href="https://x.com/rahuloraj"><img src="https://skillicons.dev/icons?i=twitter" height="32"/></a>
@@ -94,7 +98,7 @@ That's why I like to make things that make a difference.
 <h2 align="center"> DevOps Stats Matrix</h2>
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:7F77DD,100:1D9E75&height=100&section=header&text=RAHULORAJ&fontSize=45&fontColor=ffffff&animation=fadeIn&fontAlignY=55&fontAlign=50"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:7F77DD,100:1D9E75&height=100&section=header&text=Rahuloraj&fontSize=45&fontColor=ffffff&animation=fadeIn&fontAlignY=55&fontAlign=50"/>
 
 <img width="49%" src="https://github-readme-stats.vercel.app/api?username=rahuloraj&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github&include_all_commits=true&count_private=true"/>
 <img width="49%" src="https://leetcard.jacoblin.cool/rahuloraj?theme=dark&font=Nunito&hide_border=true"/>
