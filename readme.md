@@ -92,8 +92,6 @@ That's why I like to make things that make a difference.
 
 ---
 <h2 align="center"> DevOps Stats Matrix</h2>
-<h2 align="center">⚡ DevOps Stats Matrix</h2>
-
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=rahuloraj&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=ff2e63&icon_color=08f7fe&text_color=ffffff" height="170"/>
   
@@ -124,4 +122,4 @@ That's why I like to make things that make a difference.
 - [Meta Llama 3: The Future of Open Source LLM](https://rahuloraj.medium.com/meta-llama-3-the-future-of-open-source-llm-87d7fec6c9c8)<!-- BLOG-POST-LIST:START -->
 - [ERC-4337 & Web3 Messaging](https://rahuloraj.medium.com/erc-4337-web3-messaging-a552fa9dc866)
 <!-- BLOG-POST-LIST:END -->
-
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,30:08f7fe,60:ff2e63,100:8a2be2&height=150&section=footer&animation=fadeIn&fontColor=ffffff" width="100%"/>
