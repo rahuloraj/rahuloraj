@@ -8,6 +8,9 @@ on:
 permissions:
   contents: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # ✅ fixes warning
+
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -20,16 +23,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
           base: ""
-          plugin_isocalendar: no
-
-          # 🎮 BREAKOUT GAME
-          plugin_achievements: yes
-          plugin_achievements_threshold: C
-          plugin_achievements_display: detailed
-
-          # 👇 THIS ENABLES GAME STYLE GRID
           plugin_contributions: yes
-          plugin_contributions_sections: yes
           plugin_contributions_days: 365
           plugin_contributions_blocks: yes
 
