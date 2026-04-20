@@ -1,30 +1,26 @@
-name: Generate Snake
-
+name: Generate Snake Animation
 on:
   schedule:
     - cron: "0 0 * * *"
+  push:
+    branches:
+      - main
   workflow_dispatch:
-
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # ✅ FIX ADDED
-
 jobs:
-  build:
+  generate:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Generate Snake Animation
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+      - name: Generate GitHub Contribution Snake (light + dark)
         uses: Platane/snk@v3
         with:
           github_user_name: rahuloraj
           outputs: |
             dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=ff2e63
-
-      - name: Push to output branch
-        uses: crazy-max/ghaction-github-pages@v4
+            dist/github-contribution-grid-snake-dark.svg
+      - name: Push to Output Branch
+        uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: output
           build_dir: dist
