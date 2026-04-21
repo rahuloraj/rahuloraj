@@ -2,13 +2,16 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
   name: Generate Pacman Animation
 
+name: Generate Pacman Animation
+
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 */3 * * *"
   workflow_dispatch:
   push:
     branches:
       - main
+      - Master
 
 permissions:
   contents: write   # ✅ IMPORTANT (moved global)
