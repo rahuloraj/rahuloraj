@@ -1,0 +1,569 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="702" height="247"
+     viewBox="0 0 702 247"
+     style="background:#ffffff;border-radius:8px;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
+
+  <defs>
+    <radialGradient id="ball-grad-light" cx="35%" cy="35%">
+      <stop offset="0%" stop-color="#0891b2" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0e7490" stop-opacity="1"/>
+    </radialGradient>
+    <filter id="glow-light">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="702" height="247" fill="#ffffff" rx="8"/>
+
+  <!-- Score bar -->
+  <rect x="14" y="6" width="674" height="20" rx="4" fill="#e0f7fa" opacity="0.7"/>
+  <text id="score-light" x="20" y="20" font-size="11" fill="#1a1a2e" font-weight="600">
+    Score: 0
+  </text>
+  <text x="682" y="20" font-size="11" fill="#1a1a2e" text-anchor="end">
+    247 contributions this year
+  </text>
+
+  <!-- Day labels -->
+  <text x="11" y="54" font-size="8" fill="#1a1a2e" opacity="0.5" text-anchor="end">Mon</text>
+  <text x="11" y="80" font-size="8" fill="#1a1a2e" opacity="0.5" text-anchor="end">Wed</text>
+  <text x="11" y="106" font-size="8" fill="#1a1a2e" opacity="0.5" text-anchor="end">Fri</text>
+  <text x="11" y="132" font-size="8" fill="#1a1a2e" opacity="0.5" text-anchor="end">Sun</text>
+
+  <!-- Brick grid (static initial render, JS will manage alive state) -->
+  <g id="bricks-light">
+    <rect id="blight-0-0" x="14" y="44" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-0-1" x="14" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-0-2" x="14" y="70" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-0-3" x="14" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-0-4" x="14" y="96" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-0-5" x="14" y="109" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-0-6" x="14" y="122" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-1-0" x="27" y="44" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-1-1" x="27" y="57" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-1-2" x="27" y="70" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-1-3" x="27" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-1-4" x="27" y="96" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-1-5" x="27" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-1-6" x="27" y="122" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-2-0" x="40" y="44" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-2-1" x="40" y="57" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-2-2" x="40" y="70" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-2-3" x="40" y="83" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-2-4" x="40" y="96" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-2-5" x="40" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-2-6" x="40" y="122" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-3-0" x="53" y="44" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-3-1" x="53" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-3-2" x="53" y="70" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-3-3" x="53" y="83" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-3-4" x="53" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-3-5" x="53" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-3-6" x="53" y="122" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-4-0" x="66" y="44" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-4-1" x="66" y="57" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-4-2" x="66" y="70" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-4-3" x="66" y="83" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-4-4" x="66" y="96" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-4-5" x="66" y="109" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-4-6" x="66" y="122" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-5-0" x="79" y="44" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-5-1" x="79" y="57" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-5-2" x="79" y="70" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-5-3" x="79" y="83" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-5-4" x="79" y="96" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-5-5" x="79" y="109" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-5-6" x="79" y="122" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-6-0" x="92" y="44" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-6-1" x="92" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-6-2" x="92" y="70" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-6-3" x="92" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-6-4" x="92" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-6-5" x="92" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-6-6" x="92" y="122" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-7-0" x="105" y="44" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-7-1" x="105" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-7-2" x="105" y="70" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-7-3" x="105" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-7-4" x="105" y="96" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-7-5" x="105" y="109" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-7-6" x="105" y="122" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-8-0" x="118" y="44" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-8-1" x="118" y="57" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-8-2" x="118" y="70" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-8-3" x="118" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-8-4" x="118" y="96" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-8-5" x="118" y="109" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-8-6" x="118" y="122" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-9-0" x="131" y="44" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-9-1" x="131" y="57" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-9-2" x="131" y="70" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-9-3" x="131" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-9-4" x="131" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-9-5" x="131" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-9-6" x="131" y="122" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-10-0" x="144" y="44" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-10-1" x="144" y="57" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-10-2" x="144" y="70" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-10-3" x="144" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-10-4" x="144" y="96" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-10-5" x="144" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-10-6" x="144" y="122" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-11-0" x="157" y="44" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-11-1" x="157" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-11-2" x="157" y="70" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-11-3" x="157" y="83" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-11-4" x="157" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-11-5" x="157" y="109" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-11-6" x="157" y="122" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-12-0" x="170" y="44" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-12-1" x="170" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-12-2" x="170" y="70" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-12-3" x="170" y="83" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-12-4" x="170" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-12-5" x="170" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-12-6" x="170" y="122" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-13-0" x="183" y="44" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-13-1" x="183" y="57" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-13-2" x="183" y="70" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-13-3" x="183" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-13-4" x="183" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-13-5" x="183" y="109" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-13-6" x="183" y="122" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-14-0" x="196" y="44" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-14-1" x="196" y="57" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-14-2" x="196" y="70" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-14-3" x="196" y="83" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-14-4" x="196" y="96" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-14-5" x="196" y="109" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-14-6" x="196" y="122" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-15-0" x="209" y="44" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-15-1" x="209" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-15-2" x="209" y="70" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-15-3" x="209" y="83" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-15-4" x="209" y="96" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-15-5" x="209" y="109" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-15-6" x="209" y="122" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-16-0" x="222" y="44" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-16-1" x="222" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-16-2" x="222" y="70" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-16-3" x="222" y="83" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-16-4" x="222" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-16-5" x="222" y="109" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-16-6" x="222" y="122" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-17-0" x="235" y="44" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-17-1" x="235" y="57" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-17-2" x="235" y="70" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-17-3" x="235" y="83" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-17-4" x="235" y="96" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-17-5" x="235" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-17-6" x="235" y="122" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-18-0" x="248" y="44" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-18-1" x="248" y="57" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-18-2" x="248" y="70" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-18-3" x="248" y="83" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-18-4" x="248" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-18-5" x="248" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-18-6" x="248" y="122" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-19-0" x="261" y="44" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-19-1" x="261" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-19-2" x="261" y="70" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-19-3" x="261" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-19-4" x="261" y="96" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-19-5" x="261" y="109" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-19-6" x="261" y="122" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-20-0" x="274" y="44" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-20-1" x="274" y="57" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-20-2" x="274" y="70" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-20-3" x="274" y="83" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-20-4" x="274" y="96" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-20-5" x="274" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-20-6" x="274" y="122" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-21-0" x="287" y="44" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-21-1" x="287" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-21-2" x="287" y="70" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-21-3" x="287" y="83" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-21-4" x="287" y="96" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-21-5" x="287" y="109" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-21-6" x="287" y="122" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-22-0" x="300" y="44" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-22-1" x="300" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-22-2" x="300" y="70" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-22-3" x="300" y="83" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-22-4" x="300" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-22-5" x="300" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-22-6" x="300" y="122" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-23-0" x="313" y="44" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-23-1" x="313" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-23-2" x="313" y="70" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-23-3" x="313" y="83" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-23-4" x="313" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-23-5" x="313" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-23-6" x="313" y="122" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-24-0" x="326" y="44" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-24-1" x="326" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-24-2" x="326" y="70" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-24-3" x="326" y="83" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-24-4" x="326" y="96" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-24-5" x="326" y="109" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-24-6" x="326" y="122" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-25-0" x="339" y="44" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-25-1" x="339" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-25-2" x="339" y="70" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-25-3" x="339" y="83" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-25-4" x="339" y="96" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-25-5" x="339" y="109" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-25-6" x="339" y="122" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-26-0" x="352" y="44" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-26-1" x="352" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-26-2" x="352" y="70" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-26-3" x="352" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-26-4" x="352" y="96" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-26-5" x="352" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-26-6" x="352" y="122" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-27-0" x="365" y="44" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-27-1" x="365" y="57" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-27-2" x="365" y="70" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-27-3" x="365" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-27-4" x="365" y="96" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-27-5" x="365" y="109" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-27-6" x="365" y="122" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-28-0" x="378" y="44" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-28-1" x="378" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-28-2" x="378" y="70" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-28-3" x="378" y="83" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-28-4" x="378" y="96" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-28-5" x="378" y="109" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-28-6" x="378" y="122" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-29-0" x="391" y="44" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-29-1" x="391" y="57" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-29-2" x="391" y="70" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-29-3" x="391" y="83" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-29-4" x="391" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-29-5" x="391" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-29-6" x="391" y="122" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-30-0" x="404" y="44" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-30-1" x="404" y="57" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-30-2" x="404" y="70" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-30-3" x="404" y="83" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-30-4" x="404" y="96" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-30-5" x="404" y="109" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-30-6" x="404" y="122" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-31-0" x="417" y="44" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-31-1" x="417" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-31-2" x="417" y="70" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-31-3" x="417" y="83" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-31-4" x="417" y="96" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-31-5" x="417" y="109" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-31-6" x="417" y="122" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-32-0" x="430" y="44" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-32-1" x="430" y="57" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-32-2" x="430" y="70" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-32-3" x="430" y="83" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-32-4" x="430" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-32-5" x="430" y="109" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-32-6" x="430" y="122" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-33-0" x="443" y="44" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-33-1" x="443" y="57" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-33-2" x="443" y="70" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-33-3" x="443" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-33-4" x="443" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-33-5" x="443" y="109" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-33-6" x="443" y="122" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-34-0" x="456" y="44" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-34-1" x="456" y="57" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-34-2" x="456" y="70" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-34-3" x="456" y="83" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-34-4" x="456" y="96" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-34-5" x="456" y="109" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-34-6" x="456" y="122" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-35-0" x="469" y="44" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-35-1" x="469" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-35-2" x="469" y="70" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-35-3" x="469" y="83" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-35-4" x="469" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-35-5" x="469" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-35-6" x="469" y="122" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-36-0" x="482" y="44" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-36-1" x="482" y="57" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-36-2" x="482" y="70" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-36-3" x="482" y="83" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-36-4" x="482" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-36-5" x="482" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-36-6" x="482" y="122" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-37-0" x="495" y="44" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-37-1" x="495" y="57" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-37-2" x="495" y="70" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-37-3" x="495" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-37-4" x="495" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-37-5" x="495" y="109" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-37-6" x="495" y="122" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-38-0" x="508" y="44" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-38-1" x="508" y="57" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-38-2" x="508" y="70" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-38-3" x="508" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-38-4" x="508" y="96" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-38-5" x="508" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-38-6" x="508" y="122" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-39-0" x="521" y="44" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-39-1" x="521" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-39-2" x="521" y="70" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-39-3" x="521" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-39-4" x="521" y="96" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-39-5" x="521" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-39-6" x="521" y="122" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-40-0" x="534" y="44" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-40-1" x="534" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-40-2" x="534" y="70" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-40-3" x="534" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-40-4" x="534" y="96" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-40-5" x="534" y="109" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-40-6" x="534" y="122" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-41-0" x="547" y="44" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-41-1" x="547" y="57" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-41-2" x="547" y="70" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-41-3" x="547" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-41-4" x="547" y="96" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-41-5" x="547" y="109" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-41-6" x="547" y="122" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-42-0" x="560" y="44" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-42-1" x="560" y="57" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-42-2" x="560" y="70" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-42-3" x="560" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-42-4" x="560" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-42-5" x="560" y="109" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-42-6" x="560" y="122" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-43-0" x="573" y="44" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-43-1" x="573" y="57" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-43-2" x="573" y="70" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-43-3" x="573" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-43-4" x="573" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-43-5" x="573" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-43-6" x="573" y="122" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-44-0" x="586" y="44" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-44-1" x="586" y="57" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-44-2" x="586" y="70" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-44-3" x="586" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-44-4" x="586" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-44-5" x="586" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-44-6" x="586" y="122" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-45-0" x="599" y="44" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-45-1" x="599" y="57" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-45-2" x="599" y="70" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-45-3" x="599" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-45-4" x="599" y="96" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-45-5" x="599" y="109" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-45-6" x="599" y="122" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-46-0" x="612" y="44" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-46-1" x="612" y="57" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-46-2" x="612" y="70" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-46-3" x="612" y="83" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-46-4" x="612" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-46-5" x="612" y="109" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-46-6" x="612" y="122" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-47-0" x="625" y="44" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-47-1" x="625" y="57" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-47-2" x="625" y="70" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-47-3" x="625" y="83" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-47-4" x="625" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-47-5" x="625" y="109" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-47-6" x="625" y="122" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-48-0" x="638" y="44" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-48-1" x="638" y="57" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-48-2" x="638" y="70" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-48-3" x="638" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-48-4" x="638" y="96" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-48-5" x="638" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-48-6" x="638" y="122" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-49-0" x="651" y="44" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-49-1" x="651" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-49-2" x="651" y="70" width="11" height="11" rx="2" fill="#0891b2" opacity="1"/>
+    <rect id="blight-49-3" x="651" y="83" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-49-4" x="651" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-49-5" x="651" y="109" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-49-6" x="651" y="122" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-50-0" x="664" y="44" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-50-1" x="664" y="57" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-50-2" x="664" y="70" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-50-3" x="664" y="83" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-50-4" x="664" y="96" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-50-5" x="664" y="109" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-50-6" x="664" y="122" width="11" height="11" rx="2" fill="#0e7490" opacity="1"/>
+    <rect id="blight-51-0" x="677" y="44" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-51-1" x="677" y="57" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-51-2" x="677" y="70" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+    <rect id="blight-51-3" x="677" y="83" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-51-4" x="677" y="96" width="11" height="11" rx="2" fill="#ebedf0" opacity="0.6"/>
+    <rect id="blight-51-5" x="677" y="109" width="11" height="11" rx="2" fill="#40c4d8" opacity="1"/>
+    <rect id="blight-51-6" x="677" y="122" width="11" height="11" rx="2" fill="#9be9a8" opacity="1"/>
+  </g>
+
+  <!-- Paddle -->
+  <rect id="paddle-light" x="311" y="219"
+        width="80" height="8" rx="4"
+        fill="#0e7490" filter="url(#glow-light)"/>
+
+  <!-- Ball -->
+  <circle id="ball-light" cx="351" cy="212"
+          r="5" fill="url(#ball-grad-light)" filter="url(#glow-light)"/>
+
+  <!-- JS Game Engine -->
+  <script type="text/javascript"><![CDATA[
+  (function() {
+    var THEME = "light";
+    var SVG_W = 702;
+    var SVG_H = 247;
+    var CELL_W = 11;
+    var CELL_H = 11;
+    var BALL_R = 5;
+    var PADDLE_W = 80;
+    var PADDLE_H = 8;
+    var GRID_TOP = 44;
+    var GRID_H = 89;
+    var BALL_ZONE = 100;
+    var PADDING = 14;
+
+    var bricksData = [{"col": 0, "row": 0, "level": 2, "x": 14, "y": 44, "alive": 1}, {"col": 0, "row": 1, "level": 0, "x": 14, "y": 57, "alive": 0}, {"col": 0, "row": 2, "level": 0, "x": 14, "y": 70, "alive": 0}, {"col": 0, "row": 3, "level": 0, "x": 14, "y": 83, "alive": 0}, {"col": 0, "row": 4, "level": 2, "x": 14, "y": 96, "alive": 1}, {"col": 0, "row": 5, "level": 2, "x": 14, "y": 109, "alive": 1}, {"col": 0, "row": 6, "level": 4, "x": 14, "y": 122, "alive": 1}, {"col": 1, "row": 0, "level": 0, "x": 27, "y": 44, "alive": 0}, {"col": 1, "row": 1, "level": 1, "x": 27, "y": 57, "alive": 1}, {"col": 1, "row": 2, "level": 0, "x": 27, "y": 70, "alive": 0}, {"col": 1, "row": 3, "level": 0, "x": 27, "y": 83, "alive": 0}, {"col": 1, "row": 4, "level": 1, "x": 27, "y": 96, "alive": 1}, {"col": 1, "row": 5, "level": 0, "x": 27, "y": 109, "alive": 0}, {"col": 1, "row": 6, "level": 0, "x": 27, "y": 122, "alive": 0}, {"col": 2, "row": 0, "level": 2, "x": 40, "y": 44, "alive": 1}, {"col": 2, "row": 1, "level": 1, "x": 40, "y": 57, "alive": 1}, {"col": 2, "row": 2, "level": 0, "x": 40, "y": 70, "alive": 0}, {"col": 2, "row": 3, "level": 1, "x": 40, "y": 83, "alive": 1}, {"col": 2, "row": 4, "level": 3, "x": 40, "y": 96, "alive": 1}, {"col": 2, "row": 5, "level": 0, "x": 40, "y": 109, "alive": 0}, {"col": 2, "row": 6, "level": 3, "x": 40, "y": 122, "alive": 1}, {"col": 3, "row": 0, "level": 2, "x": 53, "y": 44, "alive": 1}, {"col": 3, "row": 1, "level": 0, "x": 53, "y": 57, "alive": 0}, {"col": 3, "row": 2, "level": 0, "x": 53, "y": 70, "alive": 0}, {"col": 3, "row": 3, "level": 4, "x": 53, "y": 83, "alive": 1}, {"col": 3, "row": 4, "level": 0, "x": 53, "y": 96, "alive": 0}, {"col": 3, "row": 5, "level": 0, "x": 53, "y": 109, "alive": 0}, {"col": 3, "row": 6, "level": 0, "x": 53, "y": 122, "alive": 0}, {"col": 4, "row": 0, "level": 3, "x": 66, "y": 44, "alive": 1}, {"col": 4, "row": 1, "level": 2, "x": 66, "y": 57, "alive": 1}, {"col": 4, "row": 2, "level": 3, "x": 66, "y": 70, "alive": 1}, {"col": 4, "row": 3, "level": 2, "x": 66, "y": 83, "alive": 1}, {"col": 4, "row": 4, "level": 1, "x": 66, "y": 96, "alive": 1}, {"col": 4, "row": 5, "level": 4, "x": 66, "y": 109, "alive": 1}, {"col": 4, "row": 6, "level": 0, "x": 66, "y": 122, "alive": 0}, {"col": 5, "row": 0, "level": 1, "x": 79, "y": 44, "alive": 1}, {"col": 5, "row": 1, "level": 3, "x": 79, "y": 57, "alive": 1}, {"col": 5, "row": 2, "level": 2, "x": 79, "y": 70, "alive": 1}, {"col": 5, "row": 3, "level": 3, "x": 79, "y": 83, "alive": 1}, {"col": 5, "row": 4, "level": 1, "x": 79, "y": 96, "alive": 1}, {"col": 5, "row": 5, "level": 2, "x": 79, "y": 109, "alive": 1}, {"col": 5, "row": 6, "level": 0, "x": 79, "y": 122, "alive": 0}, {"col": 6, "row": 0, "level": 0, "x": 92, "y": 44, "alive": 0}, {"col": 6, "row": 1, "level": 0, "x": 92, "y": 57, "alive": 0}, {"col": 6, "row": 2, "level": 0, "x": 92, "y": 70, "alive": 0}, {"col": 6, "row": 3, "level": 0, "x": 92, "y": 83, "alive": 0}, {"col": 6, "row": 4, "level": 0, "x": 92, "y": 96, "alive": 0}, {"col": 6, "row": 5, "level": 0, "x": 92, "y": 109, "alive": 0}, {"col": 6, "row": 6, "level": 2, "x": 92, "y": 122, "alive": 1}, {"col": 7, "row": 0, "level": 0, "x": 105, "y": 44, "alive": 0}, {"col": 7, "row": 1, "level": 0, "x": 105, "y": 57, "alive": 0}, {"col": 7, "row": 2, "level": 0, "x": 105, "y": 70, "alive": 0}, {"col": 7, "row": 3, "level": 0, "x": 105, "y": 83, "alive": 0}, {"col": 7, "row": 4, "level": 4, "x": 105, "y": 96, "alive": 1}, {"col": 7, "row": 5, "level": 2, "x": 105, "y": 109, "alive": 1}, {"col": 7, "row": 6, "level": 2, "x": 105, "y": 122, "alive": 1}, {"col": 8, "row": 0, "level": 0, "x": 118, "y": 44, "alive": 0}, {"col": 8, "row": 1, "level": 2, "x": 118, "y": 57, "alive": 1}, {"col": 8, "row": 2, "level": 0, "x": 118, "y": 70, "alive": 0}, {"col": 8, "row": 3, "level": 0, "x": 118, "y": 83, "alive": 0}, {"col": 8, "row": 4, "level": 4, "x": 118, "y": 96, "alive": 1}, {"col": 8, "row": 5, "level": 2, "x": 118, "y": 109, "alive": 1}, {"col": 8, "row": 6, "level": 1, "x": 118, "y": 122, "alive": 1}, {"col": 9, "row": 0, "level": 2, "x": 131, "y": 44, "alive": 1}, {"col": 9, "row": 1, "level": 3, "x": 131, "y": 57, "alive": 1}, {"col": 9, "row": 2, "level": 3, "x": 131, "y": 70, "alive": 1}, {"col": 9, "row": 3, "level": 0, "x": 131, "y": 83, "alive": 0}, {"col": 9, "row": 4, "level": 0, "x": 131, "y": 96, "alive": 0}, {"col": 9, "row": 5, "level": 0, "x": 131, "y": 109, "alive": 0}, {"col": 9, "row": 6, "level": 0, "x": 131, "y": 122, "alive": 0}, {"col": 10, "row": 0, "level": 0, "x": 144, "y": 44, "alive": 0}, {"col": 10, "row": 1, "level": 4, "x": 144, "y": 57, "alive": 1}, {"col": 10, "row": 2, "level": 3, "x": 144, "y": 70, "alive": 1}, {"col": 10, "row": 3, "level": 0, "x": 144, "y": 83, "alive": 0}, {"col": 10, "row": 4, "level": 2, "x": 144, "y": 96, "alive": 1}, {"col": 10, "row": 5, "level": 0, "x": 144, "y": 109, "alive": 0}, {"col": 10, "row": 6, "level": 4, "x": 144, "y": 122, "alive": 1}, {"col": 11, "row": 0, "level": 1, "x": 157, "y": 44, "alive": 1}, {"col": 11, "row": 1, "level": 0, "x": 157, "y": 57, "alive": 0}, {"col": 11, "row": 2, "level": 0, "x": 157, "y": 70, "alive": 0}, {"col": 11, "row": 3, "level": 1, "x": 157, "y": 83, "alive": 1}, {"col": 11, "row": 4, "level": 0, "x": 157, "y": 96, "alive": 0}, {"col": 11, "row": 5, "level": 1, "x": 157, "y": 109, "alive": 1}, {"col": 11, "row": 6, "level": 4, "x": 157, "y": 122, "alive": 1}, {"col": 12, "row": 0, "level": 0, "x": 170, "y": 44, "alive": 0}, {"col": 12, "row": 1, "level": 0, "x": 170, "y": 57, "alive": 0}, {"col": 12, "row": 2, "level": 4, "x": 170, "y": 70, "alive": 1}, {"col": 12, "row": 3, "level": 1, "x": 170, "y": 83, "alive": 1}, {"col": 12, "row": 4, "level": 0, "x": 170, "y": 96, "alive": 0}, {"col": 12, "row": 5, "level": 0, "x": 170, "y": 109, "alive": 0}, {"col": 12, "row": 6, "level": 0, "x": 170, "y": 122, "alive": 0}, {"col": 13, "row": 0, "level": 2, "x": 183, "y": 44, "alive": 1}, {"col": 13, "row": 1, "level": 3, "x": 183, "y": 57, "alive": 1}, {"col": 13, "row": 2, "level": 1, "x": 183, "y": 70, "alive": 1}, {"col": 13, "row": 3, "level": 0, "x": 183, "y": 83, "alive": 0}, {"col": 13, "row": 4, "level": 0, "x": 183, "y": 96, "alive": 0}, {"col": 13, "row": 5, "level": 4, "x": 183, "y": 109, "alive": 1}, {"col": 13, "row": 6, "level": 1, "x": 183, "y": 122, "alive": 1}, {"col": 14, "row": 0, "level": 4, "x": 196, "y": 44, "alive": 1}, {"col": 14, "row": 1, "level": 3, "x": 196, "y": 57, "alive": 1}, {"col": 14, "row": 2, "level": 0, "x": 196, "y": 70, "alive": 0}, {"col": 14, "row": 3, "level": 2, "x": 196, "y": 83, "alive": 1}, {"col": 14, "row": 4, "level": 2, "x": 196, "y": 96, "alive": 1}, {"col": 14, "row": 5, "level": 1, "x": 196, "y": 109, "alive": 1}, {"col": 14, "row": 6, "level": 0, "x": 196, "y": 122, "alive": 0}, {"col": 15, "row": 0, "level": 2, "x": 209, "y": 44, "alive": 1}, {"col": 15, "row": 1, "level": 0, "x": 209, "y": 57, "alive": 0}, {"col": 15, "row": 2, "level": 1, "x": 209, "y": 70, "alive": 1}, {"col": 15, "row": 3, "level": 1, "x": 209, "y": 83, "alive": 1}, {"col": 15, "row": 4, "level": 4, "x": 209, "y": 96, "alive": 1}, {"col": 15, "row": 5, "level": 3, "x": 209, "y": 109, "alive": 1}, {"col": 15, "row": 6, "level": 0, "x": 209, "y": 122, "alive": 0}, {"col": 16, "row": 0, "level": 1, "x": 222, "y": 44, "alive": 1}, {"col": 16, "row": 1, "level": 0, "x": 222, "y": 57, "alive": 0}, {"col": 16, "row": 2, "level": 4, "x": 222, "y": 70, "alive": 1}, {"col": 16, "row": 3, "level": 3, "x": 222, "y": 83, "alive": 1}, {"col": 16, "row": 4, "level": 0, "x": 222, "y": 96, "alive": 0}, {"col": 16, "row": 5, "level": 2, "x": 222, "y": 109, "alive": 1}, {"col": 16, "row": 6, "level": 2, "x": 222, "y": 122, "alive": 1}, {"col": 17, "row": 0, "level": 0, "x": 235, "y": 44, "alive": 0}, {"col": 17, "row": 1, "level": 3, "x": 235, "y": 57, "alive": 1}, {"col": 17, "row": 2, "level": 1, "x": 235, "y": 70, "alive": 1}, {"col": 17, "row": 3, "level": 3, "x": 235, "y": 83, "alive": 1}, {"col": 17, "row": 4, "level": 1, "x": 235, "y": 96, "alive": 1}, {"col": 17, "row": 5, "level": 0, "x": 235, "y": 109, "alive": 0}, {"col": 17, "row": 6, "level": 0, "x": 235, "y": 122, "alive": 0}, {"col": 18, "row": 0, "level": 0, "x": 248, "y": 44, "alive": 0}, {"col": 18, "row": 1, "level": 4, "x": 248, "y": 57, "alive": 1}, {"col": 18, "row": 2, "level": 3, "x": 248, "y": 70, "alive": 1}, {"col": 18, "row": 3, "level": 3, "x": 248, "y": 83, "alive": 1}, {"col": 18, "row": 4, "level": 0, "x": 248, "y": 96, "alive": 0}, {"col": 18, "row": 5, "level": 0, "x": 248, "y": 109, "alive": 0}, {"col": 18, "row": 6, "level": 3, "x": 248, "y": 122, "alive": 1}, {"col": 19, "row": 0, "level": 4, "x": 261, "y": 44, "alive": 1}, {"col": 19, "row": 1, "level": 0, "x": 261, "y": 57, "alive": 0}, {"col": 19, "row": 2, "level": 1, "x": 261, "y": 70, "alive": 1}, {"col": 19, "row": 3, "level": 0, "x": 261, "y": 83, "alive": 0}, {"col": 19, "row": 4, "level": 3, "x": 261, "y": 96, "alive": 1}, {"col": 19, "row": 5, "level": 3, "x": 261, "y": 109, "alive": 1}, {"col": 19, "row": 6, "level": 0, "x": 261, "y": 122, "alive": 0}, {"col": 20, "row": 0, "level": 1, "x": 274, "y": 44, "alive": 1}, {"col": 20, "row": 1, "level": 1, "x": 274, "y": 57, "alive": 1}, {"col": 20, "row": 2, "level": 0, "x": 274, "y": 70, "alive": 0}, {"col": 20, "row": 3, "level": 3, "x": 274, "y": 83, "alive": 1}, {"col": 20, "row": 4, "level": 1, "x": 274, "y": 96, "alive": 1}, {"col": 20, "row": 5, "level": 0, "x": 274, "y": 109, "alive": 0}, {"col": 20, "row": 6, "level": 1, "x": 274, "y": 122, "alive": 1}, {"col": 21, "row": 0, "level": 2, "x": 287, "y": 44, "alive": 1}, {"col": 21, "row": 1, "level": 0, "x": 287, "y": 57, "alive": 0}, {"col": 21, "row": 2, "level": 0, "x": 287, "y": 70, "alive": 0}, {"col": 21, "row": 3, "level": 4, "x": 287, "y": 83, "alive": 1}, {"col": 21, "row": 4, "level": 2, "x": 287, "y": 96, "alive": 1}, {"col": 21, "row": 5, "level": 1, "x": 287, "y": 109, "alive": 1}, {"col": 21, "row": 6, "level": 1, "x": 287, "y": 122, "alive": 1}, {"col": 22, "row": 0, "level": 0, "x": 300, "y": 44, "alive": 0}, {"col": 22, "row": 1, "level": 0, "x": 300, "y": 57, "alive": 0}, {"col": 22, "row": 2, "level": 0, "x": 300, "y": 70, "alive": 0}, {"col": 22, "row": 3, "level": 1, "x": 300, "y": 83, "alive": 1}, {"col": 22, "row": 4, "level": 0, "x": 300, "y": 96, "alive": 0}, {"col": 22, "row": 5, "level": 0, "x": 300, "y": 109, "alive": 0}, {"col": 22, "row": 6, "level": 0, "x": 300, "y": 122, "alive": 0}, {"col": 23, "row": 0, "level": 2, "x": 313, "y": 44, "alive": 1}, {"col": 23, "row": 1, "level": 0, "x": 313, "y": 57, "alive": 0}, {"col": 23, "row": 2, "level": 4, "x": 313, "y": 70, "alive": 1}, {"col": 23, "row": 3, "level": 3, "x": 313, "y": 83, "alive": 1}, {"col": 23, "row": 4, "level": 0, "x": 313, "y": 96, "alive": 0}, {"col": 23, "row": 5, "level": 0, "x": 313, "y": 109, "alive": 0}, {"col": 23, "row": 6, "level": 2, "x": 313, "y": 122, "alive": 1}, {"col": 24, "row": 0, "level": 0, "x": 326, "y": 44, "alive": 0}, {"col": 24, "row": 1, "level": 0, "x": 326, "y": 57, "alive": 0}, {"col": 24, "row": 2, "level": 4, "x": 326, "y": 70, "alive": 1}, {"col": 24, "row": 3, "level": 1, "x": 326, "y": 83, "alive": 1}, {"col": 24, "row": 4, "level": 1, "x": 326, "y": 96, "alive": 1}, {"col": 24, "row": 5, "level": 3, "x": 326, "y": 109, "alive": 1}, {"col": 24, "row": 6, "level": 3, "x": 326, "y": 122, "alive": 1}, {"col": 25, "row": 0, "level": 0, "x": 339, "y": 44, "alive": 0}, {"col": 25, "row": 1, "level": 0, "x": 339, "y": 57, "alive": 0}, {"col": 25, "row": 2, "level": 1, "x": 339, "y": 70, "alive": 1}, {"col": 25, "row": 3, "level": 1, "x": 339, "y": 83, "alive": 1}, {"col": 25, "row": 4, "level": 1, "x": 339, "y": 96, "alive": 1}, {"col": 25, "row": 5, "level": 2, "x": 339, "y": 109, "alive": 1}, {"col": 25, "row": 6, "level": 2, "x": 339, "y": 122, "alive": 1}, {"col": 26, "row": 0, "level": 4, "x": 352, "y": 44, "alive": 1}, {"col": 26, "row": 1, "level": 0, "x": 352, "y": 57, "alive": 0}, {"col": 26, "row": 2, "level": 1, "x": 352, "y": 70, "alive": 1}, {"col": 26, "row": 3, "level": 0, "x": 352, "y": 83, "alive": 0}, {"col": 26, "row": 4, "level": 3, "x": 352, "y": 96, "alive": 1}, {"col": 26, "row": 5, "level": 0, "x": 352, "y": 109, "alive": 0}, {"col": 26, "row": 6, "level": 0, "x": 352, "y": 122, "alive": 0}, {"col": 27, "row": 0, "level": 1, "x": 365, "y": 44, "alive": 1}, {"col": 27, "row": 1, "level": 1, "x": 365, "y": 57, "alive": 1}, {"col": 27, "row": 2, "level": 0, "x": 365, "y": 70, "alive": 0}, {"col": 27, "row": 3, "level": 0, "x": 365, "y": 83, "alive": 0}, {"col": 27, "row": 4, "level": 4, "x": 365, "y": 96, "alive": 1}, {"col": 27, "row": 5, "level": 1, "x": 365, "y": 109, "alive": 1}, {"col": 27, "row": 6, "level": 3, "x": 365, "y": 122, "alive": 1}, {"col": 28, "row": 0, "level": 1, "x": 378, "y": 44, "alive": 1}, {"col": 28, "row": 1, "level": 0, "x": 378, "y": 57, "alive": 0}, {"col": 28, "row": 2, "level": 4, "x": 378, "y": 70, "alive": 1}, {"col": 28, "row": 3, "level": 3, "x": 378, "y": 83, "alive": 1}, {"col": 28, "row": 4, "level": 4, "x": 378, "y": 96, "alive": 1}, {"col": 28, "row": 5, "level": 4, "x": 378, "y": 109, "alive": 1}, {"col": 28, "row": 6, "level": 3, "x": 378, "y": 122, "alive": 1}, {"col": 29, "row": 0, "level": 0, "x": 391, "y": 44, "alive": 0}, {"col": 29, "row": 1, "level": 1, "x": 391, "y": 57, "alive": 1}, {"col": 29, "row": 2, "level": 0, "x": 391, "y": 70, "alive": 0}, {"col": 29, "row": 3, "level": 1, "x": 391, "y": 83, "alive": 1}, {"col": 29, "row": 4, "level": 0, "x": 391, "y": 96, "alive": 0}, {"col": 29, "row": 5, "level": 0, "x": 391, "y": 109, "alive": 0}, {"col": 29, "row": 6, "level": 4, "x": 391, "y": 122, "alive": 1}, {"col": 30, "row": 0, "level": 0, "x": 404, "y": 44, "alive": 0}, {"col": 30, "row": 1, "level": 3, "x": 404, "y": 57, "alive": 1}, {"col": 30, "row": 2, "level": 1, "x": 404, "y": 70, "alive": 1}, {"col": 30, "row": 3, "level": 1, "x": 404, "y": 83, "alive": 1}, {"col": 30, "row": 4, "level": 4, "x": 404, "y": 96, "alive": 1}, {"col": 30, "row": 5, "level": 4, "x": 404, "y": 109, "alive": 1}, {"col": 30, "row": 6, "level": 1, "x": 404, "y": 122, "alive": 1}, {"col": 31, "row": 0, "level": 2, "x": 417, "y": 44, "alive": 1}, {"col": 31, "row": 1, "level": 0, "x": 417, "y": 57, "alive": 0}, {"col": 31, "row": 2, "level": 0, "x": 417, "y": 70, "alive": 0}, {"col": 31, "row": 3, "level": 4, "x": 417, "y": 83, "alive": 1}, {"col": 31, "row": 4, "level": 1, "x": 417, "y": 96, "alive": 1}, {"col": 31, "row": 5, "level": 1, "x": 417, "y": 109, "alive": 1}, {"col": 31, "row": 6, "level": 2, "x": 417, "y": 122, "alive": 1}, {"col": 32, "row": 0, "level": 0, "x": 430, "y": 44, "alive": 0}, {"col": 32, "row": 1, "level": 1, "x": 430, "y": 57, "alive": 1}, {"col": 32, "row": 2, "level": 1, "x": 430, "y": 70, "alive": 1}, {"col": 32, "row": 3, "level": 3, "x": 430, "y": 83, "alive": 1}, {"col": 32, "row": 4, "level": 0, "x": 430, "y": 96, "alive": 0}, {"col": 32, "row": 5, "level": 4, "x": 430, "y": 109, "alive": 1}, {"col": 32, "row": 6, "level": 0, "x": 430, "y": 122, "alive": 0}, {"col": 33, "row": 0, "level": 0, "x": 443, "y": 44, "alive": 0}, {"col": 33, "row": 1, "level": 1, "x": 443, "y": 57, "alive": 1}, {"col": 33, "row": 2, "level": 2, "x": 443, "y": 70, "alive": 1}, {"col": 33, "row": 3, "level": 0, "x": 443, "y": 83, "alive": 0}, {"col": 33, "row": 4, "level": 0, "x": 443, "y": 96, "alive": 0}, {"col": 33, "row": 5, "level": 4, "x": 443, "y": 109, "alive": 1}, {"col": 33, "row": 6, "level": 0, "x": 443, "y": 122, "alive": 0}, {"col": 34, "row": 0, "level": 1, "x": 456, "y": 44, "alive": 1}, {"col": 34, "row": 1, "level": 2, "x": 456, "y": 57, "alive": 1}, {"col": 34, "row": 2, "level": 1, "x": 456, "y": 70, "alive": 1}, {"col": 34, "row": 3, "level": 1, "x": 456, "y": 83, "alive": 1}, {"col": 34, "row": 4, "level": 1, "x": 456, "y": 96, "alive": 1}, {"col": 34, "row": 5, "level": 4, "x": 456, "y": 109, "alive": 1}, {"col": 34, "row": 6, "level": 0, "x": 456, "y": 122, "alive": 0}, {"col": 35, "row": 0, "level": 2, "x": 469, "y": 44, "alive": 1}, {"col": 35, "row": 1, "level": 0, "x": 469, "y": 57, "alive": 0}, {"col": 35, "row": 2, "level": 0, "x": 469, "y": 70, "alive": 0}, {"col": 35, "row": 3, "level": 2, "x": 469, "y": 83, "alive": 1}, {"col": 35, "row": 4, "level": 0, "x": 469, "y": 96, "alive": 0}, {"col": 35, "row": 5, "level": 0, "x": 469, "y": 109, "alive": 0}, {"col": 35, "row": 6, "level": 3, "x": 469, "y": 122, "alive": 1}, {"col": 36, "row": 0, "level": 0, "x": 482, "y": 44, "alive": 0}, {"col": 36, "row": 1, "level": 1, "x": 482, "y": 57, "alive": 1}, {"col": 36, "row": 2, "level": 4, "x": 482, "y": 70, "alive": 1}, {"col": 36, "row": 3, "level": 4, "x": 482, "y": 83, "alive": 1}, {"col": 36, "row": 4, "level": 0, "x": 482, "y": 96, "alive": 0}, {"col": 36, "row": 5, "level": 0, "x": 482, "y": 109, "alive": 0}, {"col": 36, "row": 6, "level": 0, "x": 482, "y": 122, "alive": 0}, {"col": 37, "row": 0, "level": 4, "x": 495, "y": 44, "alive": 1}, {"col": 37, "row": 1, "level": 4, "x": 495, "y": 57, "alive": 1}, {"col": 37, "row": 2, "level": 3, "x": 495, "y": 70, "alive": 1}, {"col": 37, "row": 3, "level": 0, "x": 495, "y": 83, "alive": 0}, {"col": 37, "row": 4, "level": 0, "x": 495, "y": 96, "alive": 0}, {"col": 37, "row": 5, "level": 3, "x": 495, "y": 109, "alive": 1}, {"col": 37, "row": 6, "level": 2, "x": 495, "y": 122, "alive": 1}, {"col": 38, "row": 0, "level": 2, "x": 508, "y": 44, "alive": 1}, {"col": 38, "row": 1, "level": 4, "x": 508, "y": 57, "alive": 1}, {"col": 38, "row": 2, "level": 2, "x": 508, "y": 70, "alive": 1}, {"col": 38, "row": 3, "level": 0, "x": 508, "y": 83, "alive": 0}, {"col": 38, "row": 4, "level": 3, "x": 508, "y": 96, "alive": 1}, {"col": 38, "row": 5, "level": 0, "x": 508, "y": 109, "alive": 0}, {"col": 38, "row": 6, "level": 2, "x": 508, "y": 122, "alive": 1}, {"col": 39, "row": 0, "level": 4, "x": 521, "y": 44, "alive": 1}, {"col": 39, "row": 1, "level": 0, "x": 521, "y": 57, "alive": 0}, {"col": 39, "row": 2, "level": 0, "x": 521, "y": 70, "alive": 0}, {"col": 39, "row": 3, "level": 0, "x": 521, "y": 83, "alive": 0}, {"col": 39, "row": 4, "level": 1, "x": 521, "y": 96, "alive": 1}, {"col": 39, "row": 5, "level": 0, "x": 521, "y": 109, "alive": 0}, {"col": 39, "row": 6, "level": 2, "x": 521, "y": 122, "alive": 1}, {"col": 40, "row": 0, "level": 2, "x": 534, "y": 44, "alive": 1}, {"col": 40, "row": 1, "level": 0, "x": 534, "y": 57, "alive": 0}, {"col": 40, "row": 2, "level": 2, "x": 534, "y": 70, "alive": 1}, {"col": 40, "row": 3, "level": 0, "x": 534, "y": 83, "alive": 0}, {"col": 40, "row": 4, "level": 1, "x": 534, "y": 96, "alive": 1}, {"col": 40, "row": 5, "level": 4, "x": 534, "y": 109, "alive": 1}, {"col": 40, "row": 6, "level": 3, "x": 534, "y": 122, "alive": 1}, {"col": 41, "row": 0, "level": 0, "x": 547, "y": 44, "alive": 0}, {"col": 41, "row": 1, "level": 1, "x": 547, "y": 57, "alive": 1}, {"col": 41, "row": 2, "level": 0, "x": 547, "y": 70, "alive": 0}, {"col": 41, "row": 3, "level": 0, "x": 547, "y": 83, "alive": 0}, {"col": 41, "row": 4, "level": 3, "x": 547, "y": 96, "alive": 1}, {"col": 41, "row": 5, "level": 2, "x": 547, "y": 109, "alive": 1}, {"col": 41, "row": 6, "level": 0, "x": 547, "y": 122, "alive": 0}, {"col": 42, "row": 0, "level": 2, "x": 560, "y": 44, "alive": 1}, {"col": 42, "row": 1, "level": 1, "x": 560, "y": 57, "alive": 1}, {"col": 42, "row": 2, "level": 1, "x": 560, "y": 70, "alive": 1}, {"col": 42, "row": 3, "level": 0, "x": 560, "y": 83, "alive": 0}, {"col": 42, "row": 4, "level": 0, "x": 560, "y": 96, "alive": 0}, {"col": 42, "row": 5, "level": 4, "x": 560, "y": 109, "alive": 1}, {"col": 42, "row": 6, "level": 4, "x": 560, "y": 122, "alive": 1}, {"col": 43, "row": 0, "level": 1, "x": 573, "y": 44, "alive": 1}, {"col": 43, "row": 1, "level": 3, "x": 573, "y": 57, "alive": 1}, {"col": 43, "row": 2, "level": 1, "x": 573, "y": 70, "alive": 1}, {"col": 43, "row": 3, "level": 0, "x": 573, "y": 83, "alive": 0}, {"col": 43, "row": 4, "level": 0, "x": 573, "y": 96, "alive": 0}, {"col": 43, "row": 5, "level": 0, "x": 573, "y": 109, "alive": 0}, {"col": 43, "row": 6, "level": 4, "x": 573, "y": 122, "alive": 1}, {"col": 44, "row": 0, "level": 3, "x": 586, "y": 44, "alive": 1}, {"col": 44, "row": 1, "level": 3, "x": 586, "y": 57, "alive": 1}, {"col": 44, "row": 2, "level": 4, "x": 586, "y": 70, "alive": 1}, {"col": 44, "row": 3, "level": 0, "x": 586, "y": 83, "alive": 0}, {"col": 44, "row": 4, "level": 0, "x": 586, "y": 96, "alive": 0}, {"col": 44, "row": 5, "level": 0, "x": 586, "y": 109, "alive": 0}, {"col": 44, "row": 6, "level": 3, "x": 586, "y": 122, "alive": 1}, {"col": 45, "row": 0, "level": 4, "x": 599, "y": 44, "alive": 1}, {"col": 45, "row": 1, "level": 1, "x": 599, "y": 57, "alive": 1}, {"col": 45, "row": 2, "level": 2, "x": 599, "y": 70, "alive": 1}, {"col": 45, "row": 3, "level": 0, "x": 599, "y": 83, "alive": 0}, {"col": 45, "row": 4, "level": 4, "x": 599, "y": 96, "alive": 1}, {"col": 45, "row": 5, "level": 3, "x": 599, "y": 109, "alive": 1}, {"col": 45, "row": 6, "level": 4, "x": 599, "y": 122, "alive": 1}, {"col": 46, "row": 0, "level": 3, "x": 612, "y": 44, "alive": 1}, {"col": 46, "row": 1, "level": 4, "x": 612, "y": 57, "alive": 1}, {"col": 46, "row": 2, "level": 0, "x": 612, "y": 70, "alive": 0}, {"col": 46, "row": 3, "level": 2, "x": 612, "y": 83, "alive": 1}, {"col": 46, "row": 4, "level": 0, "x": 612, "y": 96, "alive": 0}, {"col": 46, "row": 5, "level": 4, "x": 612, "y": 109, "alive": 1}, {"col": 46, "row": 6, "level": 3, "x": 612, "y": 122, "alive": 1}, {"col": 47, "row": 0, "level": 3, "x": 625, "y": 44, "alive": 1}, {"col": 47, "row": 1, "level": 3, "x": 625, "y": 57, "alive": 1}, {"col": 47, "row": 2, "level": 0, "x": 625, "y": 70, "alive": 0}, {"col": 47, "row": 3, "level": 3, "x": 625, "y": 83, "alive": 1}, {"col": 47, "row": 4, "level": 0, "x": 625, "y": 96, "alive": 0}, {"col": 47, "row": 5, "level": 3, "x": 625, "y": 109, "alive": 1}, {"col": 47, "row": 6, "level": 3, "x": 625, "y": 122, "alive": 1}, {"col": 48, "row": 0, "level": 0, "x": 638, "y": 44, "alive": 0}, {"col": 48, "row": 1, "level": 3, "x": 638, "y": 57, "alive": 1}, {"col": 48, "row": 2, "level": 1, "x": 638, "y": 70, "alive": 1}, {"col": 48, "row": 3, "level": 0, "x": 638, "y": 83, "alive": 0}, {"col": 48, "row": 4, "level": 3, "x": 638, "y": 96, "alive": 1}, {"col": 48, "row": 5, "level": 0, "x": 638, "y": 109, "alive": 0}, {"col": 48, "row": 6, "level": 0, "x": 638, "y": 122, "alive": 0}, {"col": 49, "row": 0, "level": 0, "x": 651, "y": 44, "alive": 0}, {"col": 49, "row": 1, "level": 0, "x": 651, "y": 57, "alive": 0}, {"col": 49, "row": 2, "level": 3, "x": 651, "y": 70, "alive": 1}, {"col": 49, "row": 3, "level": 4, "x": 651, "y": 83, "alive": 1}, {"col": 49, "row": 4, "level": 0, "x": 651, "y": 96, "alive": 0}, {"col": 49, "row": 5, "level": 2, "x": 651, "y": 109, "alive": 1}, {"col": 49, "row": 6, "level": 0, "x": 651, "y": 122, "alive": 0}, {"col": 50, "row": 0, "level": 4, "x": 664, "y": 44, "alive": 1}, {"col": 50, "row": 1, "level": 1, "x": 664, "y": 57, "alive": 1}, {"col": 50, "row": 2, "level": 4, "x": 664, "y": 70, "alive": 1}, {"col": 50, "row": 3, "level": 0, "x": 664, "y": 83, "alive": 0}, {"col": 50, "row": 4, "level": 4, "x": 664, "y": 96, "alive": 1}, {"col": 50, "row": 5, "level": 0, "x": 664, "y": 109, "alive": 0}, {"col": 50, "row": 6, "level": 4, "x": 664, "y": 122, "alive": 1}, {"col": 51, "row": 0, "level": 0, "x": 677, "y": 44, "alive": 0}, {"col": 51, "row": 1, "level": 0, "x": 677, "y": 57, "alive": 0}, {"col": 51, "row": 2, "level": 1, "x": 677, "y": 70, "alive": 1}, {"col": 51, "row": 3, "level": 2, "x": 677, "y": 83, "alive": 1}, {"col": 51, "row": 4, "level": 0, "x": 677, "y": 96, "alive": 0}, {"col": 51, "row": 5, "level": 2, "x": 677, "y": 109, "alive": 1}, {"col": 51, "row": 6, "level": 1, "x": 677, "y": 122, "alive": 1}];
+    var levelColors = ["#ebedf0", "#9be9a8", "#40c4d8", "#0891b2", "#0e7490"];
+
+    var ballEl    = document.getElementById("ball-" + THEME);
+    var paddleEl  = document.getElementById("paddle-" + THEME);
+    var scoreEl   = document.getElementById("score-" + THEME);
+
+    // Game state
+    var bx = SVG_W / 2;
+    var by = GRID_TOP + GRID_H + BALL_ZONE - PADDLE_H - 6 - BALL_R - 2;
+    var speed = 2.8;
+    var angle = -55 * Math.PI / 180;
+    var vx = speed * Math.cos(angle);
+    var vy = speed * Math.sin(angle);
+    var paddleX = SVG_W / 2 - PADDLE_W / 2;
+    var paddleY = GRID_TOP + GRID_H + BALL_ZONE - PADDLE_H - 6;
+    var score = 0;
+    var bricks = JSON.parse(JSON.stringify(bricksData));
+    var totalBricks = bricks.filter(function(b) { return b.alive; }).length;
+    var frameCount = 0;
+
+    function resetBall() {
+      bx = paddleX + PADDLE_W / 2;
+      by = paddleY - BALL_R - 2;
+      var a = (-45 - Math.random() * 60) * Math.PI / 180;
+      vx = speed * Math.cos(a);
+      vy = speed * Math.sin(a);
+    }
+
+    function resetGame() {
+      bricks = JSON.parse(JSON.stringify(bricksData));
+      score = 0;
+      paddleX = SVG_W / 2 - PADDLE_W / 2;
+      // Restore all brick visuals
+      bricks.forEach(function(b) {
+        var el = document.getElementById("b" + THEME + "-" + b.col + "-" + b.row);
+        if (el) {
+          el.setAttribute("fill", levelColors[b.level]);
+          el.setAttribute("opacity", b.level > 0 ? "1" : "0.6");
+        }
+      });
+      resetBall();
+    }
+
+    function movePaddle() {
+      // AI paddle: track ball with slight lag for realism
+      var target = bx - PADDLE_W / 2;
+      var diff = target - paddleX;
+      paddleX += diff * 0.08;
+      // Clamp
+      if (paddleX < PADDING) paddleX = PADDING;
+      if (paddleX + PADDLE_W > SVG_W - PADDING) paddleX = SVG_W - PADDING - PADDLE_W;
+    }
+
+    function checkBrickCollision() {
+      for (var i = 0; i < bricks.length; i++) {
+        var b = bricks[i];
+        if (!b.alive) continue;
+        var brickRight  = b.x + CELL_W;
+        var brickBottom = b.y + CELL_H;
+        // AABB collision
+        if (bx + BALL_R > b.x && bx - BALL_R < brickRight &&
+            by + BALL_R > b.y && by - BALL_R < brickBottom) {
+          b.alive = 0;
+          score += b.level * 10;
+          // Hide brick
+          var el = document.getElementById("b" + THEME + "-" + b.col + "-" + b.row);
+          if (el) el.setAttribute("opacity", "0");
+          // Reflect ball
+          var overlapX = Math.min(bx + BALL_R - b.x, brickRight - (bx - BALL_R));
+          var overlapY = Math.min(by + BALL_R - b.y, brickBottom - (by - BALL_R));
+          if (overlapX < overlapY) {
+            vx = -vx;
+          } else {
+            vy = -vy;
+          }
+          return;
+        }
+      }
+    }
+
+    function tick() {
+      frameCount++;
+
+      // Move ball
+      bx += vx;
+      by += vy;
+
+      // Wall collisions
+      if (bx - BALL_R < PADDING) { bx = PADDING + BALL_R; vx = Math.abs(vx); }
+      if (bx + BALL_R > SVG_W - PADDING) { bx = SVG_W - PADDING - BALL_R; vx = -Math.abs(vx); }
+      if (by - BALL_R < GRID_TOP - 10) { by = GRID_TOP - 10 + BALL_R; vy = Math.abs(vy); }
+
+      // Paddle collision
+      movePaddle();
+      if (by + BALL_R >= paddleY &&
+          by + BALL_R <= paddleY + PADDLE_H + 4 &&
+          bx >= paddleX - 4 && bx <= paddleX + PADDLE_W + 4) {
+        by = paddleY - BALL_R - 1;
+        vy = -Math.abs(vy);
+        // Add slight angle based on hit position
+        var hitPos = (bx - paddleX) / PADDLE_W - 0.5;
+        vx = speed * 1.2 * hitPos;
+        var newSpeed = Math.sqrt(vx*vx + vy*vy);
+        vx = vx / newSpeed * speed;
+        vy = vy / newSpeed * speed;
+        vy = -Math.abs(vy);
+      }
+
+      // Ball fell off bottom
+      if (by - BALL_R > SVG_H) {
+        resetBall();
+      }
+
+      // Check brick collisions
+      checkBrickCollision();
+
+      // Check if all bricks cleared
+      var alive = bricks.filter(function(b) { return b.alive; }).length;
+      if (alive === 0) {
+        setTimeout(resetGame, 800);
+        return;
+      }
+
+      // Update DOM
+      ballEl.setAttribute("cx", bx.toFixed(1));
+      ballEl.setAttribute("cy", by.toFixed(1));
+      paddleEl.setAttribute("x", paddleX.toFixed(1));
+      if (scoreEl) scoreEl.textContent = "Score: " + score;
+
+      requestAnimationFrame(tick);
+    }
+
+    // Start after short delay
+    setTimeout(function() {
+      resetBall();
+      requestAnimationFrame(tick);
+    }, 500);
+  })();
+  ]]></script>
+
+</svg>
