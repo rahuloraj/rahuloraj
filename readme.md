@@ -229,7 +229,7 @@ That's why I like to make things that make a difference.
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:7F77DD,100:1D9E75&height=100&section=header&text=Rahuloraj&fontSize=45&fontColor=ffffff&animation=fadeIn&fontAlignY=55&fontAlign=50"/>
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=rahuloraj&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github&include_all_commits=true&count_private=true"/>
+<img width="49%" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=rahuloraj&theme=tokyonight"/>
 <img width="49%" src="https://leetcard.jacoblin.cool/rahuloraj?theme=dark&font=Nunito&hide_border=true"/>
 
 </div>
