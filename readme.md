@@ -8,6 +8,10 @@
   <a href="https://www.linkedin.com/in/rahuloraj/"><img src="https://skillicons.dev/icons?i=linkedin" height="32"/></a>
   <a href="https://x.com/rahuloraj"><img src="https://skillicons.dev/icons?i=twitter" height="32"/></a>
   <a href="https://www.instagram.com/rahuloraj/"><img src="https://skillicons.dev/icons?i=instagram" height="32"/></a>
+<a href="https://rahuloraj.netlify.app/" target="_blank">
+  <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&color=FFB300&logoColor=black" />
+</a>
+</a>
 </p>
   
  
