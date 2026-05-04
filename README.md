@@ -235,8 +235,9 @@ That's why I like to make things that make a difference.
 
 <div align="center">
 
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=rahuloraj&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github&include_all_commits=true&count_private=true"/>&nbsp;
+<p align="center">
+  <img src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api?username=rahuloraj&show_icons=true&theme=tokyonight&hide_border=true" />
+</p>
 <img height="165" src="https://leetcard.jacoblin.cool/rahuloraj?theme=dark&font=Nunito&hide_border=true"/>
 
 </div>
