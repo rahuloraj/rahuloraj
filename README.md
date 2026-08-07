@@ -246,7 +246,9 @@ That's why I like to make things that make a difference.
 
 <br/><br/>
 <!-- Trophies -->
-<img width="100%" src="https://github-profile-trophy.vercel.app/?username=rahuloraj&theme=tokyonight&no-frame=true&no-bg=true&margin-w=6&row=1&column=7"/>
+<p align="center">
+<img src="https://github-profile-trophy.vercel.app/?username=rahuloraj&theme=algolia&no-frame=true&no-bg=true&row=2&column=4"/>
+</p>
 
 <br/><br/>
 </div>
