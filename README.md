@@ -246,10 +246,10 @@ That's why I like to make things that make a difference.
 
 <br/><br/>
 <!-- Trophies -->
-<h2 align="center">📊 GitHub Metrics</h2>
+<h2 align="center">📊 GitHub Overview</h2>
 
 <p align="center">
-  <img src="./github-metrics.svg" width="100%" alt="GitHub Metrics"/>
+  <img src="./github-metrics.svg" width="100%">
 </p>
 
 <br/><br/>
