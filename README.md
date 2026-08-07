@@ -241,17 +241,8 @@ That's why I like to make things that make a difference.
 <img height="165" src="https://leetcard.jacoblin.cool/rahuloraj?theme=dark&font=Nunito&hide_border=true"/>
 
 </div>
-
-
-
 <br/><br/>
 <!-- Trophies -->
-<h2 align="center">📊 GitHub Overview</h2>
-
-<p align="center">
-  <img src="./github-metrics.svg" width="100%">
-</p>
-
 <br/><br/>
 </div>
 <p align="center">
