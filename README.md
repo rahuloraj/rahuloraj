@@ -246,8 +246,10 @@ That's why I like to make things that make a difference.
 
 <br/><br/>
 <!-- Trophies -->
+<h2 align="center">📊 GitHub Metrics</h2>
+
 <p align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=rahuloraj&theme=algolia&no-frame=true&no-bg=true&row=2&column=4"/>
+  <img src="./github-metrics.svg" width="100%" alt="GitHub Metrics"/>
 </p>
 
 <br/><br/>
