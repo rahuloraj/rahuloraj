@@ -7,6 +7,13 @@
 <p>
   <a href="https://www.linkedin.com/in/rahuloraj/"><img src="https://skillicons.dev/icons?i=linkedin" height="32"/></a>
   <a href="https://x.com/rahuloraj"><img src="https://skillicons.dev/icons?i=twitter" height="32"/></a>
+   <a href="https://medium.com/@rahuloraj" target="_blank">
+  <img src="https://img.shields.io/badge/-000000?style=flat&logo=medium&logoColor=white"
+       width="32"
+       height="32"
+       alt="Medium" /></a>
+       <a href="https://facebook.com/raahuloraj" target="_blank">
+  <img src="https://cdn.simpleicons.org/facebook" width="32" height="32" alt="Facebook"></a>
   
 <a href="https://rahuloraj.netlify.app/" target="_blank">
   <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&color=FFB300&logoColor=black" />
