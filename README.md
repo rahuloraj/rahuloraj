@@ -25,7 +25,7 @@
 
 
 I am a Software Engineer, founder of WebifyGlobals — a SaaS company focused on delivering modern web solutions to businesses. I handle everything from product strategy to engineering and security
- and Cyber Security Specialist. 
+ and Cyber Security Specialist. Director at Zarxtrades Private Limited, I manage all cross border operations and business supplies.
 
 As a Web developer, I enjoy using my obsessive attention to detail, and my unequivocal love for making things that change the world.
 
@@ -37,7 +37,7 @@ That's why I like to make things that make a difference.
 ### Talking about Personal Stuff:
 
 - 👨‍🎓 I'm a **Software Development Engineer**
--  **Founder of WebifyGlobals**
+-  **Founder of WebifyGlobals & Director at Zarxtrades Pvt.Ltd.**
 - 💬  MERN · Angular · Web Security . Agentic AI . RAG . NLP . Generative AI 
 - ✍ I'm a **Technical Writer** at Medium with 1000+ reads
 - 👯 Join my [community](http://medium.com/@rahuloraj) if you're a tech enthusiast
