@@ -265,6 +265,7 @@ That's why I like to make things that make a difference.
 ## 📕Latest Blog Posts
 
 - [Shodan: The Most Powerful and Alarming Search Engine](https://rahuloraj.medium.com/shodan-the-most-powerful-and-alarming-search-engine-a0a43f43df4f)
+- [Ai Agent is the New Attack](https://rahuloraj.medium.com/your-ai-agent-is-the-new-attack-surface-17f4134e4e1a)
 - [Hacking LLMs 101 : ATTACKS ON LLMS](https://blog.gopenai.com/hacking-llms-101-attacks-on-llms-186e3ebff0cb)
 - [SEXi Cyber Ransom : $140 Million Demand Sparks Cybersecurity Frenzy and Trojan Hunt](https://rahuloraj.medium.com/sexi-cyber-ransom-shakes-industry-140-million-demand-sparks-cybersecurity-frenzy-and-trojan-hunt-925176940a58)
 - [Retrieval-Augmented Generation is Rewriting AI](https://medium.com/@rahuloraj/retrieval-augmented-generation-is-rewriting-ai-5abde6eba5ef)
